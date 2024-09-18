@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Bán Lẻ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/font/lucide.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+<div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white p-6 space-y-4">
+        <div class="text-2xl font-bold text-blue-500">LOGO</div>
+        <nav class="space-y-2">
+            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+                <i class="icon-bar-chart-2"></i>
+                <span>Trang chủ</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+                <i class="icon-package"></i>
+                <span>Quản lý kho</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+                <i class="icon-shopping-bag"></i>
+                <span>Quản lý hàng hóa</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+                <i class="icon-file-text"></i>
+                <span>Báo cáo thống kê</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+                <i class="icon-settings"></i>
+                <span>Quản lý hệ thống</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 p-8 overflow-auto">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-semibold text-blue-500">HỆ THỐNG BÁN LẺ</h1>
+            <div class="flex items-center space-x-4">
+                <i class="icon-bell"></i>
+                <div class="flex items-center space-x-2">
+                    <img src="avatar.svg" alt="User" class="w-8 h-8 rounded-full">
+                    <span>Quản trị hệ thống</span>
+                    <i class="icon-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="mb-8">
+            <h2 class="text-xl mb-4">Chào buổi chiều, Quản trị hệ thống!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 rounded-lg bg-blue-100 text-blue-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm">Doanh thu</p>
+                            <p class="text-2xl font-bold mt-2">5 Tr</p>
+                        </div>
+                        <i class="icon-bar-chart-2"></i>
+                    </div>
+                    <p class="text-sm mt-2">Tăng +5% tháng này</p>
+                </div>
+                <div class="p-4 rounded-lg bg-orange-100 text-orange-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm">Doanh thu cùng kỳ tháng trước</p>
+                            <p class="text-2xl font-bold mt-2">3 Tr</p>
+                        </div>
+                        <i class="icon-bar-chart-2"></i>
+                    </div>
+                    <p class="text-sm mt-2">Tăng +10% tháng này</p>
+                </div>
+                <div class="p-4 rounded-lg bg-yellow-100 text-yellow-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm">Số đơn hàng</p>
+                            <p class="text-2xl font-bold mt-2">1000</p>
+                        </div>
+                        <i class="icon-shopping-bag"></i>
+                    </div>
+                    <p class="text-sm mt-2">Tăng +10% tháng này</p>
+                </div>
+                <div class="p-4 rounded-lg bg-pink-100 text-pink-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm">Phiếu chờ phê duyệt</p>
+                            <p class="text-2xl font-bold mt-2">10</p>
+                        </div>
+                        <i class="icon-users"></i>
+                    </div>
+                    <p class="text-sm mt-2">Tăng +10% tháng này</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-4">Doanh thu theo ngày</h3>
+            <!-- Placeholder for chart -->
+            <div class="bg-white p-4 rounded-lg h-64 flex items-center justify-center">
+                Chart placeholder
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg">
+                <h4 class="font-semibold mb-4">Cảnh báo tồn kho</h4>
+                <table class="w-full">
+                    <thead>
+                    <tr>
+                        <th class="text-left">Tên sản phẩm</th>
+                        <th class="text-right">Số lượng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+                <h4 class="font-semibold mb-4">Mặt hàng nổi bật</h4>
+                <table class="w-full">
+                    <thead>
+                    <tr>
+                        <th class="text-left">Tên sản phẩm</th>
+                        <th class="text-right">Số lượng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+                <h4 class="font-semibold mb-4">Sản phẩm tồn kho</h4>
+                <table class="w-full">
+                    <thead>
+                    <tr>
+                        <th class="text-left">Tên sản phẩm</th>
+                        <th class="text-right">Số lượng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    <tr><td>Đĩa CD</td><td class="text-right">50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

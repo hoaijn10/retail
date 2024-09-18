@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống bán lẻ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-50">
+<div class="flex h-screen">
+    <aside class="bg-white">
+        <div class="flex p-4 justify-between align-middle">
+            <p class="text-2xl text-blue-500 font-semibold">LOGO</p>
+            <button>
+                <img src="assets/icons/collapse.svg" alt="" class="h-8">
+            </button>
+        </div>
+        <nav class="nav-link space-y-2">
+            <a href="#" class="flex justify-between p-1 align-middle">
+                <div class="flex space-x-3 align-middle">
+                    <img src="assets/icons/home.svg" alt="" class="h-6">
+                    <p class="text-blue-500 text-sm">Trang chu</p>
+                </div>
+            </a>
+            <a href="#" class="flex justify-between p-1 align-middle">
+                <div class="flex justify-between space-x-3 align-middle">
+                    <img src="assets/icons/stock.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly kho</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6">
+            </a>
+            <a href="#" class="flex justify-between p-1 align-middle">
+                <div class="flex justify-between space-x-3 align-middle">
+                    <img src="assets/icons/product.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly hang hoa</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6">
+            </a>
+            <a href="#" class="flex justify-between p-1 align-middle">
+                <div class="flex justify-between space-x-3 align-middle">
+                    <img src="assets/icons/sale.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly ban hang</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6">
+            </a>
+            <a href="#" class="flex justify-between p-1 align-middle">
+                <div class="flex justify-between space-x-3 align-middle">
+                    <img src="assets/icons/stats.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Bao cao thong ke </p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6">
+            </a>
+            <a href="#" class="flex justify-between p-1 align-middle">
+                <div class="flex justify-between space-x-3 align-middle">
+                    <img src="assets/icons/sysman.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly he thong</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6">
+            </a>
+        </nav>
+    </aside>
+    <div class="flex-1 overflow-auto">
+        <header class="bg-white flex justify-between space-x-4 p-4 align-middle">
+            <h1 class="text-2xl text-blue-500 font-semibold">HE THONG BAN LE</h1>
+            <div class="flex items-center space-x-4 align-middle">
+                <img src="assets/icons/notice.svg" alt="">
+                <div class="flex items-center space-x-2 align-middle">
+                    <img src="assets/photos/avatar.svg" alt="" class="w-8 h-8 rounded-full">
+                    <p class="text-sm font-medium text-gray-800">Quan tri he thong</p>
+                    <img src="assets/icons/down.svg" alt="">
+                </div>
+            </div>
+        </header>
+        <main class="p-6 mb-8">
+            <div class="flex justify-between p-4 bg-white rounded-lg mb-6 text-gray-600 text-xl font-medium">
+                <span>Chao buoi chieu, Quan tri he thong</span>
+                <span>22:30 - 18/09/2024</span>
+            </div>
+            <div class="flex space-x-6 mb-6">
+                <div class="bg-white rounded-lg p-4 flex space-x-6 w-1/5">
+                    <img src="assets/icons/doanhthu.svg" alt="" class="size-10">
+                    <div>
+                        <h1 class="text-gray-800 text-2xl font-semibold">5 Tr</h1>
+                        <span class="text-gray-800 font-medium text-sm">Doanh thu</span>
+                        <p class="text-sm font-medium text-gray-800">Tang <span class="text-green-600 bg-green-100 px-2 rounded-sm">+5%</span> thang nay</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-4 flex space-x-6 w-1/5">
+                    <img src="assets/icons/doanhthu2.svg" alt="" class="size-10">
+                    <div>
+                        <h1 class="text-gray-800 text-2xl font-semibold">3 Tr</h1>
+                        <span class="text-gray-800 font-medium text-sm">Doanh thu cung ky thang truoc</span>
+                        <p class="text-sm font-medium text-gray-800">Tang <span class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> thang nay</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-4 flex space-x-6 w-1/5">
+                    <img src="assets/icons/donhang.svg" alt="" class="size-10">
+                    <div>
+                        <h1 class="text-gray-800 text-2xl font-semibold">1000</h1>
+                        <span class="text-gray-800 font-medium text-sm">So don hang</span>
+                        <p class="text-sm font-medium text-gray-800">Tang <span class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> thang nay</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-4 flex space-x-6 w-1/5">
+                    <img src="assets/icons/chopheduyet.svg" alt="" class="size-10">
+                    <div>
+                        <h1 class="text-gray-800 text-2xl font-semibold">10</h1>
+                        <span class="text-gray-800 font-medium text-sm">Phieu cho phe duyet</span>
+                        <p class="text-sm font-medium text-gray-800">Tang <span class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> thang nay</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-4 flex space-x-6 w-1/5">
+                    <img src="assets/icons/chopheduyet.svg" alt="" class="size-10">
+                    <div>
+                        <h1 class="text-gray-800 text-2xl font-semibold">10</h1>
+                        <span class="text-gray-800 font-medium text-sm">Phieu cho phe duyet</span>
+                        <p class="text-sm font-medium text-gray-800">Tang <span class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> thang nay</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-white rounded-lg p-6">
+                <div>
+                    <p class="text-2xl font-semibold text-gray-800">Doanh thu theo ngay</p>
+                </div>
+                <div class="h-80 flex items-center justify-center">
+                    <p class="text-2xl font-semibold text-gray-800">Chart placeholder</p>
+                </div>
+            </div>
+
+            <div class="flex space-x-6">
+                <div class="p-4 bg-white rounded-lg space-y-2 w-1/3">
+                    <div class="flex justify-between align-middle">
+                        <p class="font-medium text-xl text-gray-800">Canh bao ton kho</p>
+                        <img src="assets/icons/instockalert.svg" alt="" class="size-6">
+                    </div>
+                    <div class="flex justify-between align-middle">
+                        <p class="text-sm text-gray-600">Ten san pham</p>
+                        <p class="text-sm text-gray-600">So luong</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">50</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Bao cao su</p>
+                        <p class="text-sm text-gray-600">250</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">50</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Bao cao su</p>
+                        <p class="text-sm text-gray-600">250</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg space-y-2 w-1/3">
+                    <div class="flex justify-between align-middle">
+                        <p class="font-medium text-xl text-gray-800">Mat hang noi bat</p>
+                        <img src="assets/icons/hotprod.svg" alt="" class="size-6">
+                    </div>
+                    <div class="flex justify-between align-middle">
+                        <p class="text-sm text-gray-600">Ten san pham</p>
+                        <p class="text-sm text-gray-600">So luong</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">50</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Bao cao su</p>
+                        <p class="text-sm text-gray-600">250</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">50</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Bao cao su</p>
+                        <p class="text-sm text-gray-600">250</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg space-y-2 w-1/3">
+                    <div class="flex justify-between align-middle">
+                        <p class="font-medium text-xl text-gray-800">San phan ton kho</p>
+                        <img src="assets/icons/instock.svg" alt="" class="size-6">
+                    </div>
+                    <div class="flex justify-between align-middle">
+                        <p class="text-sm text-gray-600">Ten san pham</p>
+                        <p class="text-sm text-gray-600">So luong</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">50</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Bao cao su</p>
+                        <p class="text-sm text-gray-600">250</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">50</p>
+                    </div>
+                    <div class="flex justify-between align-middle pl-1">
+                        <p class="text-sm text-gray-600">Bao cao su</p>
+                        <p class="text-sm text-gray-600">250</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+</body>
+</html>
