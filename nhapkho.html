@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quan ly nhap kho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-50">
+<div class="flex h-screen">
+    <aside class="bg-white">
+        <div class="flex p-4 justify-between align-middle">
+            <p class="text-2xl text-blue-500 font-semibold">LOGO</p>
+            <button>
+                <img src="assets/icons/collapse.svg" alt="" class="h-8">
+            </button>
+        </div>
+        <nav class="nav-link space-y-2">
+            <div class="flex justify-between p-1 items-center align-middle">
+                <div class="flex space-x-3 items-center align-middle">
+                    <img src="assets/icons/home.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm">Trang chu</p>
+                </div>
+            </div>
+            <div>
+                <button class="flex justify-between p-1 items-center align-middle w-full">
+                    <div class="flex justify-between space-x-3 items-center align-middle">
+                        <img src="assets/icons/stock.svg" alt="" class="h-6">
+                        <p class="text-blue-500 text-sm">Quan ly kho</p>
+                    </div>
+                    <img src="assets/icons/right.svg" alt="" class="h-6 ml-2 rotate-90">
+                </button>
+                <div class="border-l-blue-500 border-2 ml-4 border-transparent pr-4">
+                    <a href="" class="flex space-x-2 py-2 px-4 bg-blue-100 rounded-r-md">
+                        <img src="assets/icons/Ellipse 3(1).svg" alt="">
+                        <p class="text-blue-500 text-sm font-light">Nhap kho</p>
+                    </a>
+                    <a href="" class="flex space-x-2 py-2 px-4">
+                        <img src="assets/icons/Ellipse 3(1).svg" alt="">
+                        <p class="text-gray-800 text-sm font-light">Xuat kho</p>
+                    </a>
+                    <a href="" class="flex space-x-2 py-2 px-4">
+                        <img src="assets/icons/Ellipse 3(1).svg" alt="">
+                        <p class="text-gray-800 text-sm font-light">Ton kho</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-between p-1 items-center align-middle">
+                <div class="flex justify-between space-x-3 items-center align-middle">
+                    <img src="assets/icons/product.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly hang hoa</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6 ml-2">
+            </div>
+            <div class="flex justify-between p-1 items-center align-middle">
+                <div class="flex justify-between space-x-3 items-center align-middle">
+                    <img src="assets/icons/sale.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly ban hang</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6 ml-2">
+            </div>
+            <div class="flex justify-between p-1 items-center align-middle">
+                <div class="flex justify-between space-x-3 items-center align-middle">
+                    <img src="assets/icons/stats.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Bao cao thong ke </p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6 ml-2">
+            </div>
+            <div class="flex justify-between p-1 items-center align-middle">
+                <div class="flex justify-between space-x-3 items-center align-middle">
+                    <img src="assets/icons/sysman.svg" alt="" class="h-6">
+                    <p class="text-gray-800 text-sm hover:text-blue-500">Quan ly he thong</p>
+                </div>
+                <img src="assets/icons/right.svg" alt="" class="h-6 ml-2">
+            </div>
+        </nav>
+    </aside>
+    <div class="flex-1 overflow-auto">
+        <header class="bg-white flex justify-between space-x-4 p-4 align-middle sticky top-0">
+            <h1 class="text-2xl text-blue-500 font-semibold">HE THONG BAN LE</h1>
+            <div class="flex items-center space-x-4 align-middle">
+                <img src="assets/icons/notice.svg" alt="">
+                <div class="flex items-center space-x-2 align-middle">
+                    <img src="assets/photos/avatar.svg" alt="" class="w-8 h-8 rounded-full">
+                    <p class="text-sm font-medium text-gray-800">Quan tri he thong</p>
+                    <img src="assets/icons/down.svg" alt="">
+                </div>
+            </div>
+        </header>
+        <main class="p-4 mb-8 space-y-4">
+            <div class="flex justify-between items-center align-middle">
+                <div class="flex justify-center space-x-2 items-center align-middle text-sm font-normal text-black/70">
+                    <span>Trang chu /</span> <span>Quan ly kho /</span> <span class="text-sm font-medium text-blue-500">Nhap kho (30)</span>
+                </div>
+                <div class="flex justify-center space-x-4 items-center align-middle">
+                    <button class="px-4 py-2 bg-blue-500 rounded-md flex justify-center space-x-2 items-center align-middle">
+                        <img src="assets/icons/add.svg" alt="add" class="size-6">
+                        <span class="text-white text-sm font-medium">Them moi</span>
+                    </button>
+                    <button class="px-4 py-2 bg-blue-500 rounded-md flex justify-center space-x-3 items-center align-middle">
+                        <img src="assets/icons/Xuất file.svg" alt="export" class="size-6">
+                        <span class="text-white text-sm font-medium">Xuat file</span>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg w-full p-4">
+                <div class="table w-full">
+                    <div class="table-header-group">
+                        <div class="table-row ">
+                            <div class="table-cell text-center py-4 ">STT</div>
+                            <div class="table-cell text-center py-4">Nguoi nhap</div>
+                            <div class="table-cell text-center py-4">Ngay nhap</div>
+                            <div class="table-cell text-center py-4">So lo nhap</div>
+                            <div class="table-cell text-center py-4">So phieu</div>
+                            <div class="table-cell text-center py-4">Trang thai</div>
+                            <div class="table-cell text-center py-4">Thao tac</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-4 px-6 "></div>
+                            <div class="table-cell py-4 px-6">
+                                <div class="flex space-x-2 items-center px-4 justify-center rounded-md border-2 border-gray-200">
+                                    <input type="text" placeholder="Nhap..." class="text-gray-600 text-sm py-2 px-4">
+                                </div>
+                            </div>
+                            <div class="table-cell py-4 px-6">
+                                <div class="flex space-x-2 items-center px-4 justify-center rounded-md border-2 border-gray-200">
+                                    <input type="text" placeholder="Chon..." class="text-gray-600 text-sm  py-2 px-4 w-full">
+                                    <img src="assets/icons/Date Selector Icon.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                            <div class="table-cell py-4 px-6">
+                                <div class="flex space-x-2 items-center px-4 justify-center rounded-md border-2 border-gray-200">
+                                    <input type="text" placeholder="Nhap..." class="text-gray-600 text-sm py-2 px-4 w-full">
+                                </div>
+                            </div>
+                            <div class="table-cell py-4 px-6">
+                                <div class="flex space-x-2 items-center px-4 justify-center rounded-md border-2 border-gray-200">
+                                    <input type="text" placeholder="Nhap..." class="text-gray-600 text-sm py-2 px-4 w-full">
+                                </div>
+                            </div>
+                            <div class="table-cell py-4 px-6">
+                                <div class="flex space-x-2 items-center px-4 justify-center rounded-md border-2 border-gray-200">
+                                    <input type="text" placeholder="Chon..." class="text-gray-600 text-sm py-2 px-4 w-full">
+                                    <img src="assets/icons/Dropdown Icon.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                            <div class="table-cell text-center py-4 px-6 "></div>
+                        </div>
+                    </div>
+                    <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-center py-2">1</div>
+                            <div class="table-cell text-center py-2">Nguyen Van A</div>
+                            <div class="table-cell text-center py-2">23/08/2024</div>
+                            <div class="table-cell text-center py-2">100</div>
+                            <div class="table-cell text-center py-2">01</div>
+                            <div class="table-cell text-center py-2"><span
+                                    class="bg-green-100 text-green-600 py-2 rounded-md px-6">Da phe duyet</span></div>
+                            <div class="table-cell text-center py-2">
+                                <div class="flex justify-center items-center align-middle space-x-2">
+                                    <img src="assets/icons/Chỉnh sửa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Xóa.svg" alt="" class="size-6">
+                                    <img src="assets/icons/Lịch sử.svg" alt="" class="size-6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-2 mt-8">
+                    <p class="text-gray-600 text-sm">Nhap so 10 tren tong so 30 ban ghi</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
