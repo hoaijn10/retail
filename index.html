@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>He thong ban le</title>
+    <title>Hệ thống bán lẻ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -16,7 +16,7 @@
 </head>
 <body class="bg-blue-50">
 <div class="block md:flex h-screen">
-    <aside class="bg-white sticky top-0">
+    <aside class="bg-white sticky top-0 z-30">
         <div class="flex p-4 justify-between items-center align-middle">
             <p class="text-2xl text-blue-500 font-semibold">LOGO</p>
             <button class="hidden md:flex">
@@ -26,7 +26,7 @@
                           fill="#3B82F6"/>
                 </svg>
             </button>
-            <button id="expand-menu" class="flex md:hidden hover:shadow-md">
+            <button id="expand-menu" class="flex md:hidden py-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_441_3999" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
                           height="24">
@@ -144,7 +144,7 @@
         </nav>
     </aside>
     <div class="flex-1 overflow-auto">
-        <header class="bg-white justify-between space-x-4 p-4 align-middle sticky top-0 hidden md:flex">
+        <header class="bg-white justify-between space-x-4 p-4 align-middle sticky top-0 z-30 hidden md:flex">
             <h1 class="text-2xl text-blue-500 font-semibold">HỆ THỐNG BÁN LẺ</h1>
             <div class="flex items-center space-x-4 align-middle">
                 <button>
@@ -165,8 +165,8 @@
                 </div>
             </div>
         </header>
-        <main class="p-4 md:p-6 mb-2 md:mb-8">
-            <div class="flex justify-between p-4 bg-white rounded-lg mb-6 text-gray-600 text-sm md:text-xl font-normal md:font-medium">
+        <main class="p-4 md:p-6 space-y-4 md:space-y-8">
+            <div class="flex justify-between p-4 bg-white rounded-lg text-gray-600 text-sm md:text-xl font-normal md:font-medium">
                 <div class="block md:flex space-x-0 md:space-x-2">
                     <p>Chào buổi chiều, </p>
                     <p>Quản trị hệ thống!</p>
@@ -177,8 +177,21 @@
                     <p>29/09/2024</p>
                 </div>
             </div>
-            <div class="md:flex gap-6 mb-6 text-sm">
-                <div class="bg-white rounded-lg p-4 flex mb-2 md:mb-0 space-x-6 w-full md:w-1/5">
+            <div class="md:flex gap-6 mb-6 text-sm relative z-10">
+                <button id="next-btn" onclick="next()"
+                        class="absolute block md:hidden p-2 top-8 right-6 z-20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_434_3211" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="24" height="24">
+                            <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_434_3211)">
+                            <path d="M8.15974 21.4292C7.66791 21.8993 6.88878 21.8887 6.40769 21.4076C5.90939 20.9093 5.92231 20.0999 6.43397 19.6153L12.9829 13.4131C13.8003 12.6389 13.8179 11.3429 13.0218 10.5468L6.25 3.77496C5.40914 2.63236 6.84311 1.21529 8.025 1.99996L15.1319 9.1069C16.7191 10.694 16.6899 13.2761 15.0673 14.8269L8.15974 21.4292Z"
+                                  fill="#6B7280"/>
+                        </g>
+                    </svg>
+                </button>
+                <div id="stats-0" class="bg-white rounded-lg p-4 hidden md:flex space-x-6 w-full md:w-1/5">
                     <div>
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="40" height="40" rx="6.66667" fill="#3B82F6"/>
@@ -199,7 +212,7 @@
                                 class="text-green-600 bg-green-100 px-2 rounded-sm">+5%</span> tháng này</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg p-4 flex mb-2 md:mb-0 space-x-6 w-full md:w-1/5">
+                <div id="stats-1" class="bg-white rounded-lg p-4 hidden md:flex space-x-6 w-full md:w-1/5">
                     <div>
                         <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.799988" width="40" height="40" rx="6.66667" fill="#FB923C"/>
@@ -220,7 +233,7 @@
                                 class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> tháng này</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg p-4 flex mb-2 md:mb-0 space-x-6 w-full md:w-1/5">
+                <div id="stats-2" class="bg-white rounded-lg p-4 hidden md:flex space-x-6 w-full md:w-1/5">
                     <div>
                         <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.599976" width="40" height="40" rx="6.66667" fill="#FACC15"/>
@@ -241,7 +254,7 @@
                                 class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> tháng này</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg p-4 flex mb-2 md:mb-0 space-x-6 w-full md:w-1/5">
+                <div id="stats-3" class="bg-white rounded-lg p-4 hidden md:flex space-x-6 w-full md:w-1/5">
                     <div>
                         <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.399963" width="40" height="40" rx="6.66667" fill="#FF45CB"/>
@@ -262,23 +275,23 @@
                                 class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> tháng này</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg p-4 flex mb-2 md:mb-0 space-x-6 w-full md:w-1/5">
+                <div id="stats-4" class="bg-white rounded-lg p-4 hidden md:flex space-x-6 w-full md:w-1/5">
                     <div>
                         <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.399963" width="40" height="40" rx="6.66667" fill="#FF45CB"/>
-                            <mask id="mask0_319_7753" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10"
+                            <rect x="0.199951" width="40" height="40" rx="6.66667" fill="#FF848B"/>
+                            <mask id="mask0_319_7761" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10"
                                   width="21" height="20">
-                                <rect x="10.4" y="10" width="20" height="20" fill="#D9D9D9"/>
+                                <rect x="10.2" y="10" width="20" height="20" fill="#D9D9D9"/>
                             </mask>
-                            <g mask="url(#mask0_319_7753)">
-                                <path d="M22.9 26.6667C21.0388 26.6667 19.4625 26.0209 18.1708 24.7292C16.8791 23.4375 16.2333 21.8612 16.2333 20C16.2333 18.1528 16.8791 16.5799 18.1708 15.2813C19.4625 13.9827 21.0388 13.3334 22.9 13.3334C24.7472 13.3334 26.3201 13.9827 27.6187 15.2813C28.9173 16.5799 29.5666 18.1528 29.5666 20C29.5666 21.8612 28.9173 23.4375 27.6187 24.7292C26.3201 26.0209 24.7472 26.6667 22.9 26.6667ZM22.9 25C24.2888 25 25.4694 24.5139 26.4416 23.5417C27.4138 22.5695 27.9 21.3889 27.9 20C27.9 18.6112 27.4138 17.4306 26.4416 16.4584C25.4694 15.4862 24.2888 15 22.9 15C21.5111 15 20.3305 15.4862 19.3583 16.4584C18.3861 17.4306 17.9 18.6112 17.9 20C17.9 21.3889 18.3861 22.5695 19.3583 23.5417C20.3305 24.5139 21.5111 25 22.9 25ZM24.7958 23.1042L25.9833 21.9167L23.7333 19.6667V16.6667H22.0666V20.3542L24.7958 23.1042ZM12.0666 17.5V15.8334H15.4V17.5H12.0666ZM11.2333 20.8334V19.1667H15.4V20.8334H11.2333ZM12.0666 24.1667V22.5H15.4V24.1667H12.0666Z"
+                            <g mask="url(#mask0_319_7761)">
+                                <path d="M24.3666 28.3334C23.2139 28.3334 22.2312 27.9271 21.4187 27.1146C20.6062 26.3021 20.2 25.3195 20.2 24.1667C20.2 23.0139 20.6062 22.0313 21.4187 21.2188C22.2312 20.4063 23.2139 20 24.3666 20C25.5194 20 26.502 20.4063 27.3145 21.2188C28.127 22.0313 28.5333 23.0139 28.5333 24.1667C28.5333 25.3195 28.127 26.3021 27.3145 27.1146C26.502 27.9271 25.5194 28.3334 24.3666 28.3334ZM25.7625 26.1459L26.3458 25.5625L24.7833 24V21.6667H23.95V24.3334L25.7625 26.1459ZM14.3666 27.5C13.9083 27.5 13.5159 27.3368 13.1895 27.0105C12.8632 26.6841 12.7 26.2917 12.7 25.8334V14.1667C12.7 13.7084 12.8632 13.316 13.1895 12.9896C13.5159 12.6632 13.9083 12.5 14.3666 12.5H17.8458C17.9986 12.0139 18.2972 11.6146 18.7416 11.3021C19.1861 10.9896 19.6722 10.8334 20.2 10.8334C20.7555 10.8334 21.252 10.9896 21.6895 11.3021C22.127 11.6146 22.4222 12.0139 22.575 12.5H26.0333C26.4916 12.5 26.884 12.6632 27.2104 12.9896C27.5368 13.316 27.7 13.7084 27.7 14.1667V19.375C27.45 19.1945 27.1861 19.0417 26.9083 18.9167C26.6305 18.7917 26.3389 18.6806 26.0333 18.5834V14.1667H24.3666V16.6667H16.0333V14.1667H14.3666V25.8334H18.7833C18.8805 26.1389 18.9916 26.4306 19.1166 26.7084C19.2416 26.9862 19.3944 27.25 19.575 27.5H14.3666ZM20.2 14.1667C20.4361 14.1667 20.634 14.0868 20.7937 13.9271C20.9534 13.7674 21.0333 13.5695 21.0333 13.3334C21.0333 13.0973 20.9534 12.8993 20.7937 12.7396C20.634 12.5799 20.4361 12.5 20.2 12.5C19.9639 12.5 19.7659 12.5799 19.6062 12.7396C19.4465 12.8993 19.3666 13.0973 19.3666 13.3334C19.3666 13.5695 19.4465 13.7674 19.6062 13.9271C19.7659 14.0868 19.9639 14.1667 20.2 14.1667Z"
                                       fill="white"/>
                             </g>
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-gray-800 text-lg md:text-2xl font-semibold">10</h1>
-                        <span class="text-gray-800 font-normal md:font-medium text-sm">Đang chờ xử lý</span>
+                        <h1 class="text-gray-800 text-2xl font-semibold">10</h1>
+                        <span class="text-gray-800 font-medium text-sm">Đang chờ xử lý</span>
                         <p class="text-sm font-medium text-gray-800">Tăng <span
                                 class="text-green-600 bg-green-100 px-2 rounded-sm">+10%</span> tháng này</p>
                     </div>
@@ -360,7 +373,7 @@
                         <div class="absolute w-full h-0.5 md:h-1 bg-orange-500 rounded-full top-40 z-20"></div>
                     </div>
                 </div>
-                <div class="md:ml-6 flex items-center align-middle mt-4 space-x-4 md:space-x-6 w-full md:w-1/2">
+                <div class="flex justify-around items-center align-middle mt-4 md:mt-6 space-x-4 md:space-x-6 w-full md:w-1/3">
                     <div class="flex justify-between space-x-2 items-center align-middle">
                         <div class="size-3 md:size-6 rounded-full bg-blue-500"></div>
                         <p class="text-sm">Online</p>
@@ -399,19 +412,19 @@
                         <p class="text-sm text-gray-600">Số lượng</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">Đĩa CD</p>
                         <p class="text-sm text-gray-600">50</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Son Jymec</p>
+                        <p class="text-sm text-gray-600">Sơn Jymec</p>
                         <p class="text-sm text-gray-600">250</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Dau dau nanh Simply</p>
+                        <p class="text-sm text-gray-600">Dầu đậu nành Simply</p>
                         <p class="text-sm text-gray-600">17</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Thung rac Tien Phong</p>
+                        <p class="text-sm text-gray-600">Thùng rác Tiền Phong</p>
                         <p class="text-sm text-gray-600">34</p>
                     </div>
                 </div>
@@ -437,19 +450,19 @@
                         <p class="text-sm text-gray-600">Số lượng</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Mi tom Kokomi Dai</p>
+                        <p class="text-sm text-gray-600">Mì Kokomi Đại</p>
                         <p class="text-sm text-gray-600">1465</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Gang tay</p>
+                        <p class="text-sm text-gray-600">Găng tay</p>
                         <p class="text-sm text-gray-600">250</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Khoa Viet Tiep</p>
+                        <p class="text-sm text-gray-600">Khóa Việt - Tiệp</p>
                         <p class="text-sm text-gray-600">245</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Nuoc tay rua VIM</p>
+                        <p class="text-sm text-gray-600">Nước súc miệng VIM</p>
                         <p class="text-sm text-gray-600">250</p>
                     </div>
                 </div>
@@ -469,19 +482,19 @@
                         <p class="text-sm text-gray-600">Số lượng</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">Đĩa CD</p>
                         <p class="text-sm text-gray-600">50</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Thung xop</p>
+                        <p class="text-sm text-gray-600">Thùng xốp</p>
                         <p class="text-sm text-gray-600">250</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Dia CD</p>
+                        <p class="text-sm text-gray-600">Kem đánh răng Suzy</p>
                         <p class="text-sm text-gray-600">50</p>
                     </div>
                     <div class="flex justify-between align-middle pl-1">
-                        <p class="text-sm text-gray-600">Thung carton</p>
+                        <p class="text-sm text-gray-600">Thùng carton</p>
                         <p class="text-sm text-gray-600">250</p>
                     </div>
                 </div>
