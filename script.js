@@ -27,3 +27,19 @@ function next() {
     currentIndex = (currentIndex + 1) % stats.length;
     hideAllExceptCurrent();
 }
+
+let beHiddens = document.querySelectorAll('.be-hidden');
+let colNavBtn = document.getElementById('col-nav');
+let logo = document.getElementById('logo');
+function colNav() {
+    logo.classList.toggle('hidden');
+    colNavBtn.classList.toggle('rotate-180');
+    beHiddens.forEach(beHidden => beHidden.classList.toggle('hidden'));
+}
+
+let expandSectionBtn = document.getElementById('expand-section-btn');
+let items = document.getElementById('items');
+function expandSection() {
+    expandSectionBtn.classList.toggle('rotate-90');
+    items.classList.toggle('hidden');
+}
