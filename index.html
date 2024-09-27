@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ thống bán lẻ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -14,19 +13,19 @@
         }
     </style>
 </head>
-<body class="bg-blue-50">
+<body class="bg-blue-50" onresize="f5()">
 <div class="block md:flex h-screen">
     <aside class="bg-white sticky top-0 z-30">
         <div class="flex p-4 justify-between items-center align-middle">
             <a id="logo" href="index.html" class="text-2xl text-blue-500 font-semibold">LOGO</a>
-            <button id="col-nav" class="hidden md:flex" onclick="colNav()">
+            <button id="col-nav" class="hidden md:flex" onclick="collapseNav()">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="4" fill="#EFF6FF"/>
                     <path d="M17.0628 20.6724C17.1422 20.7518 17.1819 20.8431 17.1819 20.9462C17.1819 21.0494 17.1422 21.1407 17.0628 21.22L16.4676 21.8153C16.3882 21.8946 16.2969 21.9343 16.1938 21.9343C16.0906 21.9343 15.9993 21.8946 15.92 21.8153L10.3723 16.2677C10.293 16.1883 10.2533 16.097 10.2533 15.9939C10.2533 15.8907 10.293 15.7994 10.3723 15.72L15.92 10.1724C15.9993 10.0931 16.0906 10.0534 16.1938 10.0534C16.2969 10.0534 16.3882 10.0931 16.4676 10.1724L17.0628 10.7677C17.1422 10.847 17.1819 10.9383 17.1819 11.0415C17.1819 11.1446 17.1422 11.2359 17.0628 11.3153L12.3842 15.9939L17.0628 20.6724ZM21.6342 20.6724C21.7136 20.7518 21.7533 20.8431 21.7533 20.9462C21.7533 21.0494 21.7136 21.1407 21.6342 21.22L21.039 21.8153C20.9596 21.8946 20.8684 21.9343 20.7652 21.9343C20.662 21.9343 20.5708 21.8946 20.4914 21.8153L14.9438 16.2677C14.8644 16.1883 14.8247 16.097 14.8247 15.9939C14.8247 15.8907 14.8644 15.7994 14.9438 15.72L20.4914 10.1724C20.5708 10.0931 20.662 10.0534 20.7652 10.0534C20.8684 10.0534 20.9596 10.0931 21.039 10.1724L21.6342 10.7677C21.7136 10.847 21.7533 10.9383 21.7533 11.0415C21.7533 11.1446 21.7136 11.2359 21.6342 11.3153L16.9557 15.9939L21.6342 20.6724Z"
                           fill="#3B82F6"/>
                 </svg>
             </button>
-            <button id="expand-menu" class="flex md:hidden py-2">
+            <button id="expand-menu" class="flex md:hidden py-2" onclick="expandMenu()">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_441_3999" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
                           height="24">

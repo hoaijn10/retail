@@ -1,51 +1,63 @@
-let expandBtn = document.getElementById('expand-menu');
-let navMenu = document.getElementById('nav-menu');
-expandBtn.addEventListener('click', function () {
-    navMenu.classList.toggle('hidden');
-});
-
-let stats = Array.from(document.querySelectorAll('[id^="stats-"]'));
+const navMenu = document.getElementById('nav-menu');
+const stats = Array.from(document.querySelectorAll('[id^="stats-"]'));
+const colNavBtn = document.getElementById('col-nav');
+const logo = document.getElementById('logo');
+const expandSectionBtn = document.getElementById('expand-section-btn');
+const items = document.getElementById('items');
+const beHiddens = document.querySelectorAll('.be-hidden');
 
 let currentIndex = 0;
+let navCollapsed = false;
+let sectionExpanded = false;
+let menuExpanded = false;
+
+function toggleClass(element, className) {
+    element.classList.toggle(className);
+}
 
 function hideAllExceptCurrent() {
     const screenWidth = window.innerWidth;
-    if (screenWidth <= 768) {
-        stats.forEach((stat, index) => {
-            stat.style.display = index === currentIndex ? 'flex' : 'none';
-        });
-    } else {
-        stats.forEach(stat => stat.style.display = 'flex');
-    }
+    stats.forEach((stat, index) => {
+        stat.style.display = (screenWidth <= 768 && index !== currentIndex) ? 'none' : 'flex';
+    });
 }
-
-hideAllExceptCurrent();
-
-window.addEventListener('resize', hideAllExceptCurrent);
 
 function next() {
     currentIndex = (currentIndex + 1) % stats.length;
     hideAllExceptCurrent();
 }
 
-let beHiddens = document.querySelectorAll('.be-hidden');
-let colNavBtn = document.getElementById('col-nav');
-let logo = document.getElementById('logo');
-function colNav() {
-    logo.classList.toggle('hidden');
-    colNavBtn.classList.toggle('rotate-180');
+function expandMenu() {
+    toggleClass(navMenu, 'hidden');
+    menuExpanded = !menuExpanded;
+}
+
+function collapseNav() {
+    toggleClass(logo, 'hidden');
+    toggleClass(colNavBtn, 'rotate-180');
     if (sectionExpanded) {
         expandSection();
     }
-    beHiddens.forEach(beHidden => beHidden.classList.toggle('hidden'));
+    beHiddens.forEach(beHidden => toggleClass(beHidden, 'hidden'));
+    navCollapsed = !navCollapsed;
+    console.log("navCollapsed: ", navCollapsed);
 }
 
-let sectionExpanded = false;
-
-let expandSectionBtn = document.getElementById('expand-section-btn');
-let items = document.getElementById('items');
 function expandSection() {
-    expandSectionBtn.classList.toggle('rotate-90');
-    items.classList.toggle('hidden');
+    toggleClass(expandSectionBtn, 'rotate-90');
+    toggleClass(items, 'hidden');
     sectionExpanded = !sectionExpanded;
+}
+
+// Initial setup
+hideAllExceptCurrent();
+
+function f5() {
+    if (navCollapsed) {
+        collapseNav();
+    }
+    hideAllExceptCurrent();
+    if (menuExpanded) {
+        expandMenu();
+    }
 }
