@@ -34,12 +34,18 @@ let logo = document.getElementById('logo');
 function colNav() {
     logo.classList.toggle('hidden');
     colNavBtn.classList.toggle('rotate-180');
+    if (sectionExpanded) {
+        expandSection();
+    }
     beHiddens.forEach(beHidden => beHidden.classList.toggle('hidden'));
 }
+
+let sectionExpanded = false;
 
 let expandSectionBtn = document.getElementById('expand-section-btn');
 let items = document.getElementById('items');
 function expandSection() {
     expandSectionBtn.classList.toggle('rotate-90');
     items.classList.toggle('hidden');
+    sectionExpanded = !sectionExpanded;
 }
