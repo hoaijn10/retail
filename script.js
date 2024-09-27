@@ -40,7 +40,6 @@ function collapseNav() {
     }
     beHiddens.forEach(beHidden => toggleClass(beHidden, 'hidden'));
     navCollapsed = !navCollapsed;
-    console.log("navCollapsed: ", navCollapsed);
 }
 
 function expandSection() {
@@ -49,14 +48,16 @@ function expandSection() {
     sectionExpanded = !sectionExpanded;
 }
 
-// Initial setup
 hideAllExceptCurrent();
 
 function f5() {
+    hideAllExceptCurrent();
     if (navCollapsed) {
         collapseNav();
     }
-    hideAllExceptCurrent();
+    if (sectionExpanded) {
+        expandSection();
+    }
     if (menuExpanded) {
         expandMenu();
     }
